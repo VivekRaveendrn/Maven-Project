@@ -45,6 +45,13 @@ pipeline {
        }
        
        
+        stage('build and push docker image') {
+    steps {
+    // Using Google JIB plugin                                                                                                         
+    sh 'mvn compile com.google.cloud.tools:jib-maven-plugin:1.3.0:build'
+    }
+}
+       
       
     }
 }
