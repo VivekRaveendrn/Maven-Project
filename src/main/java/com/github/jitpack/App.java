@@ -10,7 +10,6 @@ public class App
     {
         System.out.println(new App().greet("world"));
     }
-
     public String greet(String name) {
         return "Hello " + name;
     }
