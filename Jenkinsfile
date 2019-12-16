@@ -8,7 +8,7 @@ pipeline {
     stages {
        
        stage('Checkout'){
-          steps{
+          steps {
           def url = sh(returnStdout: true, script: 'git config.remote.origin.url').trim()
           print url
           }
