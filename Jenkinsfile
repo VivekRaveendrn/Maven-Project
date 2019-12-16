@@ -4,5 +4,12 @@ node('') {
         print url
         branchname="${BRANCH_NAME}"
         print branchname
+        if (branchname.contains("Db"))
+        {
+            stage('Trigger')
+            {
+                build job: 'SampleProject/Test'
+            }
+        }
     }
 }
