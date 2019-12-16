@@ -19,13 +19,7 @@
     </dependency>
   </dependencies>
   
-  <distributionManagement>
-	       <repository>
-	       <id>maven-snapshots</id>
-	      <url>http://34.93.81.29:8081/repository/maven-snapshots/</url>
-	       </repository>
-	</distributionManagement>
-
+  
   
   <build>
     <plugins>
@@ -67,5 +61,13 @@
       </plugin>
     </plugins>
   </build>
+	
+	<distributionManagement>
+	       <repository>
+	       <id>maven-snapshots</id>
+	      <url>http://34.93.81.29:8081/repository/maven-snapshots/</url>
+	       </repository>
+	</distributionManagement>
+
 
 </project>
