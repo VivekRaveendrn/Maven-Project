@@ -46,6 +46,12 @@ pipeline {
       }
        }
        
+       stage('Publish to Nexus'){
+          steps{
+          nexusArtifactUploader artifacts: [[artifactId: 'maven-simple', classifier: '', file: 'Simple Maven example', type: 'jar']], credentialsId: '1c1314d5-5d5b-42c4-bdee-6a28ff34e037', groupId: 'com.github.jitpack', nexusUrl: '34.93.81.29:8081/ ', nexusVersion: 'nexus2', protocol: 'http', repository: 'maven-snapshots', version: '0.2-SNAPSHOT'
+          }
+       }
+       
        
       
     }
